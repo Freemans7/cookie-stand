@@ -8,6 +8,7 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>cookie-stand-sales</h1>
     <div class='dataView'>
         <table>
             <th>
@@ -37,6 +38,19 @@
             </tfoot>
         </table>
     </div>
+    <form id="myForm">
+    <fieldset>
+        <label for='loc'>Location Name</label>
+        <input name='loc' type='text'></input>
+        <label for='max'>Minimum customers per hour</label>
+        <input name='max' type='number'></input>
+        <label for='min'>Max customers per hour</label>
+        <input name='min' type='number'></input>
+        <label for='avg'>Average cookies sold per person</label>
+        <input name='avg' type='number'></input>
+        <button type='submit'>Submit</button>
+        </fieldset>
+        </form>
     <script src="constructor.js"></script>
 </body>
 </html>

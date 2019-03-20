@@ -1,10 +1,21 @@
+h1 {
+  text-align: center;
+  font-size: 50px;
+}
+body {
+  background-color: rgb(201, 104, 14);
+}
 td {
   text-align: center;
   padding: 10px;
-  border: 1px solid 
+  border: 1px solid;
 }
-tr:nth-child(even) {background: rgb(250, 128, 114)}
-
+tr:nth-child(even) {
+  background: rgb(233, 150, 122);
+}
+tr:nth-child(odd) {
+  background: rgb(255, 160, 122);
+}
 th {
   padding: 10px;
 }

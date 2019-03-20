@@ -4,6 +4,16 @@
 var hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12pm', '1pm', '2pm', '3pm',
   '4pm', '5pm', '6pm', '7pm', '8pm'];
 
+var stores =[
+
+  new Store('First and Pike', 23, 65, 6.3),
+  new Store('SeaTac Airport', 3, 24, 1.2),
+  new Store('Seattle Center', 11, 38, 3.7),
+  new Store('Capitol Hill', 20, 38, 2.3),
+  new Store('Alki', 2, 16, 4.6),
+];
+
+
 function Store(locationName, minCustomersPerHour, maxCustomersPerHour, avgCookiesPerSale) {
   this.locationName = locationName;
   this.minCustomersPerHour = minCustomersPerHour;
@@ -54,17 +64,45 @@ Store.prototype.render = function() {
   tr.appendChild(totalDailyCookies);
 };
 
+var addNewLocation = document.getElementById('myForm');
 
-var firstAndPike = new Store('First and Pike', 23, 65, 6.3);
-var seatacAirport = new Store('SeaTac Airport', 3, 24, 1.2);
-var seattleCenter = new Store('Seattle Center', 11, 38, 3.7);
-var capitolHill = new Store('Capitol Hill', 20, 38, 2.3);
-var alki = new Store('Alki', 2, 16, 4.6);
+function myFunction(event) {
+  console.log(event);
+  event.preventDefault();
+  var loc = event.target.loc.value;
+  var min = parseInt(event.target.min.value);
+  var max = parseInt(event.target.max.value);
+  var avg = parseInt(event.target.avg.value);
+  var newStore = new Store(loc, min, max, avg);
+  newStore.render();
+  stores.push(newStore);
+  addNewLocation.reset();
+}
+
+addNewLocation.addEventListener('submit', myFunction);
 
 
-//createTable();
-firstAndPike.render();
-seatacAirport.render();
-seattleCenter.render();
-capitolHill.render();
-alki.render();
+stores.forEach(function(store) {
+  store.render();
+});
+
+var row = document.createElement('tr');
+
+var totalPlaceHolder = document.createElement('td');
+totalPlaceHolder.textContent = 'total';
+row.appendChild(totalPlaceHolder);
+
+
+for(var i = 0; i < hours.length; i++) {
+var total = 0;
+  for(var j = 0; j < stores.length; j++) {
+    total += stores[j].cookiesEachHour[i];
+  }
+  var td = document.createElement('td');
+  td.textContent = total;
+  row.appendChild(td);
+}
+
+document.getElementById('tableFooter').appendChild(row);
+
+
