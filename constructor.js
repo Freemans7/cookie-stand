@@ -163,6 +163,10 @@ console.log(cedarRapids);
 
  seattleCenter.render();
 
+
+
+
+ asdfsfadf
  var capitolHill = {
      locationName: 'Capitol Hill',
      minCustomersPerHour: 20,
