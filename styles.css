@@ -3,7 +3,7 @@ td {
   padding: 10px;
   border: 1px solid 
 }
-tr:nth-child(even) {background: #CCC}
+tr:nth-child(even) {background: rgb(250, 128, 114)}
 
 th {
   padding: 10px;
