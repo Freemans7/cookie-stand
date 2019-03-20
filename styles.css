@@ -1,0 +1,10 @@
+td {
+  text-align: center;
+  padding: 10px;
+  border: 1px solid 
+}
+tr:nth-child(even) {background: #CCC}
+
+th {
+  padding: 10px;
+}
