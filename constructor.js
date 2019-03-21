@@ -94,7 +94,7 @@ row.appendChild(totalPlaceHolder);
 
 
 for(var i = 0; i < hours.length; i++) {
-var total = 0;
+  var total = 0;
   for(var j = 0; j < stores.length; j++) {
     total += stores[j].cookiesEachHour[i];
   }
