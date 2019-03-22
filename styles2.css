@@ -1,0 +1,92 @@
+body,
+html,
+p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: arial, helvetica, sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: rgb(255, 160, 122);
+}
+
+header,
+section,
+footer {
+    padding: 90px 30px;
+}
+
+header {
+    position: relative;
+    height: 100vh;
+    background-image: url("images/family.jpg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-color: #c6c6c6;
+    background-blend-mode: screen;
+    box-sizing: border-box;
+}
+
+.header-content {
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    bottom: 90px;
+}
+
+h1 {
+    color: rgb(250, 128, 114);
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.static {
+    background-repeat: repeat;
+    background-blend-mode: screen;
+    background-color: #ececec;
+}
+
+footer {
+    text-align: center;
+    height: 50vh;
+}
+.image-one {
+  background-image: url("images/fish.jpg");
+}
+.image-two {
+  background-image: url("images/chinook.jpg");
+}
+.image-three {
+  background-image: url("images/cutter.jpeg");
+}
+.image-four {
+  background-image: url("images/salmon.png");
+}
+div.cookie-monster {
+
+}
+.color-one {
+  background-color: rgb(250, 128, 114);
+  text-align: center;
+}
+.color-two {
+  background-color: rgb(255, 160, 122);
+  text-align: center;
+}
+.color-three {
+  background-color: rgb(250, 128, 114);
+  text-align: center;
+}
+.color-four {
+  background-color: rgb(255, 160, 122);
+  text-align: center;
+}
+.salmon-cookies-pic {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 400px;
+}
